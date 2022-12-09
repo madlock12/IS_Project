@@ -138,7 +138,7 @@ if (isset($_POST["insert"])) {
             if (isset($_POST['search_by_roll_num_for_search'])) {
                 global $roll;
                 $roll = mysqli_real_escape_string($con,$_POST['roll_no']);
-                $query = "select * from `site` where `site`.`site_ID` = '$_roll'";
+                $query = "select * from `site` where `site`.`site_ID` = '$roll'";
                 $query_run = mysqli_query($con, $query);
                 while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>

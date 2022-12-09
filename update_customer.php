@@ -123,7 +123,7 @@ if (isset($_POST['submit'])) {
             }
             if (isset($_POST['search_by_roll_num_for_search'])) {
                 $rol=mysqli_real_escape_string($con,$_POST['roll_no']);
-                $query = "select * from users where Customer_ID = '$_rol'";
+                $query = "select * from users where Customer_ID = '$rol'";
                 $query_run = mysqli_query($con, $query);
                 while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>
